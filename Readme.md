@@ -1,6 +1,6 @@
 # Simple-Invoice
 
-A full-stack invoicing app: sign in, browse invoices with search / filter / sort / pagination,
+A full stack invoicing app: sign in, browse invoices with search / filter / sort / pagination,
 open an invoice to see its line items and totals, and create new invoices.
 
 | Layer    | Stack                                                                                   |
