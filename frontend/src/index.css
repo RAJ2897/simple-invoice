@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media print {
+  .no-print,
+  .mantine-AppShell-header {
+    display: none !important;
+  }
+
+  .mantine-AppShell-main {
+    padding-top: 0 !important;
+    background: #fff !important;
+  }
+
+  .mantine-Paper-root {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}

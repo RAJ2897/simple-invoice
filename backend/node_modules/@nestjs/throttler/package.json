@@ -1,0 +1,105 @@
+{
+  "name": "@nestjs/throttler",
+  "version": "6.7.1",
+  "description": "A Rate-Limiting module for NestJS to work on Express, Fastify, Websockets, Socket.IO, and GraphQL, all rolled up into a simple package.",
+  "author": "Jay McDoniel <me@jaymcdoniel.dev>",
+  "contributors": [],
+  "keywords": [
+    "nestjs",
+    "rate-limit",
+    "throttle",
+    "express",
+    "fastify",
+    "ws",
+    "gql",
+    "nest"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@apollo/server": "5.5.1",
+    "@changesets/cli": "3.0.3",
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-angular": "21.2.2",
+    "@nestjs/cli": "12.0.3",
+    "@nestjs/common": "12.0.4",
+    "@nestjs/core": "12.0.4",
+    "@nestjs/graphql": "14.0.1",
+    "@nestjs/platform-express": "12.0.4",
+    "@nestjs/platform-fastify": "12.0.4",
+    "@nestjs/platform-socket.io": "12.0.4",
+    "@nestjs/platform-ws": "12.0.4",
+    "@nestjs/schematics": "12.0.4",
+    "@nestjs/testing": "12.0.4",
+    "@nestjs/websockets": "12.0.4",
+    "@semantic-release/git": "11.0.1",
+    "@types/express": "5.0.6",
+    "@types/express-serve-static-core": "5.1.3",
+    "@types/node": "24.13.6",
+    "@types/supertest": "7.2.1",
+    "@vitest/coverage-v8": "5.0.1",
+    "conventional-changelog-cli": "5.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "graphql": "17.0.2",
+    "graphql-tools": "9.0.35",
+    "husky": "9.1.7",
+    "lint-staged": "17.5.1",
+    "nodemon": "3.1.14",
+    "oxlint": "1.85.0",
+    "pactum": "^3.4.1",
+    "pinst": "3.0.0",
+    "prettier": "3.9.8",
+    "reflect-metadata": "0.2.2",
+    "rimraf": "6.1.3",
+    "rxjs": "7.8.2",
+    "socket.io": "4.8.3",
+    "supertest": "7.2.2",
+    "ts-loader": "9.6.2",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.0",
+    "vitest": "5.0.1",
+    "ws": "8.21.3"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0",
+    "@nestjs/core": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0",
+    "reflect-metadata": "^0.1.13 || ^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestjs/throttler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nestjs/throttler/issues"
+  },
+  "homepage": "https://github.com/nestjs/throttler#readme",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "preversion": "pnpm run format && pnpm run lint && pnpm build",
+    "build": "nest build",
+    "commit": "git-cz",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start:dev": "nodemon --watch '{src,test/app}/**/*.ts' --ignore '**/*.spec.ts' --exec 'ts-node' test/app/main.ts",
+    "lint": "oxlint src/ test/",
+    "lint:fix": "oxlint src/ test/ --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:e2e": "vitest run --config vitest.config.e2e.mts",
+    "test:e2e:dev": "vitest --config vitest.config.e2e.mts",
+    "release": "changeset publish"
+  }
+}
